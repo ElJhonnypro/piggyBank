@@ -17,10 +17,13 @@ export default function Home() {
     const year = now.getFullYear();
     const month = now.getMonth() + 1;
     const day = now.getDate();
+    const hour = now.getHours();
+    const minute = now.getMinutes();
 
-    const formattedDate = `${year}-${month}-${day}`;
+    const formattedDate = `${year}-${month}-${day} ${hour}:${minute}`;
     setCurrentDate(formattedDate);
   };
+  const getTotalFunc = () => {
     axios
       .post("http://192.168.10.122:2345/getTotal", {
         passwordapi: "myapipassword",
@@ -33,7 +36,7 @@ export default function Home() {
         console.error("Error fetching total:", error);
         setTotal(0);
       });
-
+    }
     axios
       .post("http://192.168.10.122:2345/lastPayment", {
         passwordapi: "myapipassword",
@@ -68,12 +71,14 @@ export default function Home() {
 
   useEffect(() => {
     getCurrentDate()
+    getTotalFunc()
   }, )
+
   return (
     <div>
       <br />
-      <h3>Total: {total}$</h3>
-      <h3>Ultimo pago: {lastPayment}$</h3>
+      <h3 >Total: <span className={total <= 0 ? 'negative': 'positive'}>{total}$</span></h3>
+      <h3>Ultimo pago: <span className={lastPayment <= 0 ? 'negative' : 'positive'}>{lastPayment}$</span></h3>
       <h3>Fecha del ultimo pago: {lastPaymentDate}</h3>
 
       <button className={homestyle.botonmenu} onClick={handleCreatePayment}>Create Payment</button>

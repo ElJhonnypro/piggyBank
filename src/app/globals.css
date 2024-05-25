@@ -4,7 +4,31 @@
 }
 body{
   background: rgb(242,242,242);
-  background: linear-gradient(450deg, rgba(242,242,242,1) 43%, rgb(244, 244, 244) 70%);
+  background: linear-gradient(365deg, rgb(230, 230, 230) 43%, rgb(244, 244, 244) 70%, rgb(198, 198, 198));
+  background-size: 400%;
   color: #000000;
   font-family: sans-serif;
+}
+
+/* others */
+
+.positive {
+  color: rgb(0, 166, 0);
+}
+
+.negative {
+  color: rgb(225, 0, 0);
+}
+
+
+.positivebg {
+  background-color: rgb(0, 239, 0);
+}
+
+.negativebg {
+  background-color: rgb(225, 0, 0);
+}
+
+.bold {
+  font-weight: 900;
 }

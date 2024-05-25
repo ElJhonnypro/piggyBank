@@ -20,17 +20,17 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div className={payments.maindiv}>
       <h1>All Payments</h1>
       <br />
-      
+      <div className={payments.cards}>
       {allPayments.map((payment) => (
-        <div key={payment.id} className={`${payments.card} ${payment.type === 'positive' ? payments.positive : payments.negative}`}>
-          <p>Date: {payment.date}</p>
-          <p>Payment: {payment.payment}$</p>
-
+        <div key={payment.id} className={payments.card}>
+          <p>Date: <span className="bold">{payment.date}</span></p>
+          <p>Payment: <span className={`${payment.payment <= 0 ? 'negative' : 'positive'} ${'bold'}`}>{payment.payment}$</span></p>
         </div>
       ))}
+    </div>
     </div>
   );
 }

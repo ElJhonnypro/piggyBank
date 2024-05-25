@@ -1,15 +1,27 @@
+.maindiv {
+  margin-top: 2vh;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  background: #e2e2e2;
+  padding: 25px;
+
+}
+
+
 .card {
-    border: 1px solid #ccc;
+    border: 1.2px solid #8d8d8d;
     border-radius: 5px;
-    padding: 10px;
+    padding: 2vh;
+    background: linear-gradient(20deg,#d0d0d0, #eeeeee, #d0d0d0);
+    width: 60vh;
+    text-align: center;
     margin-bottom: 10px;
-  }
-  
-  .positive {
-    color: green;
-  }
-  
-  .negative {
-    color: red;
   }
   
