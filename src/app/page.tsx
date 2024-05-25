@@ -80,6 +80,11 @@ export default function Home() {
 
       {isMenuOpen && (
         <div className={homestyle.menu}>
+
+          <button onClick={() => {handleCreatePayment()}}
+           className={homestyle.Xbutton}>X</button>
+          <h1>Create Payment Menu v0.3!</h1>
+          <br />
           <input
             type="number"
             onChange={(event) => {

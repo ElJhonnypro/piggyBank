@@ -6,9 +6,29 @@
     border: 1px solid #ccc; /* Borde del menú */
     border-radius: 4px; /* Bordes redondeados */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra del menú */
-    padding: 8px; /* Espaciado interno del menú */
+    padding: 2vh; /* Espaciado interno del menú */
+    min-height: 15vh;
+    max-height: 25vh;
     z-index: 1000; /* Ajusta el índice z según sea necesario para que el menú aparezca sobre otros elementos */
+  
   }
+
+.menu .Xbutton {
+  transition: all .3s;
+  background: #ff0000;
+  border-style: none;
+  padding: 1vh;
+  margin-bottom: 1vh;
+
+}
+
+.menu .Xbutton:hover {
+  transition: all .3s;
+  background: #e51700;
+  border-style: none;
+  padding: 1.04vh;
+
+}
 
 .botonmenu{
   background-image: linear-gradient(365deg,#00bbff, #006aff);
