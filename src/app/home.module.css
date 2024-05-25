@@ -1,0 +1,19 @@
+.menu {
+    position: absolute;
+    top: 50px; /* Ajusta la posición vertical del menú según tus necesidades */
+    left: 10px; /* Ajusta la posición horizontal del menú según tus necesidades */
+    background-color: #fff; /* Color de fondo del menú */
+    border: 1px solid #ccc; /* Borde del menú */
+    border-radius: 4px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra del menú */
+    padding: 8px; /* Espaciado interno del menú */
+    z-index: 1000; /* Ajusta el índice z según sea necesario para que el menú aparezca sobre otros elementos */
+  }
+
+.botonmenu{
+  background-image: linear-gradient(365deg,#00bbff, #006aff);
+  border-style: none;
+  border-radius: 2px;
+  padding: 5px;
+  margin: 2px;
+}

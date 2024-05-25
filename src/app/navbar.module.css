@@ -1,0 +1,26 @@
+.header{
+    background: #dddddd;
+    box-shadow: 0 0 50px rgb(134, 134, 134);
+    padding: 25px;
+}
+.header nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: space-evenly;
+    
+}
+.header .listitem a{
+    text-decoration: none;
+    color: #000;
+    transition: all .5s;
+}
+.header .active a{
+    text-decoration: none;
+    background-color: #00b3ff;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    transition: all .2s;
+}
