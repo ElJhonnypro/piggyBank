@@ -1,0 +1,15 @@
+{
+  "name": "apipiggybank",
+  "version": "0.0.0",
+  "description": "this is a api for a next js app",
+  "main": "main.ts",
+  "scripts": {
+    "start-ts": "npx ts-node main.ts",
+    "tojs": "npx tsc",
+    "start-js": "node build/main.js",
+    "initbasets": "npx ts-node databasemanagement.ts",
+    "initbasejs": "node build/databasemanagement.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -27,7 +27,12 @@ export default function Home() {
       {allPayments.map((payment) => (
         <div key={payment.id} className={payments.card}>
           <p>Date: <span className="bold">{payment.date}</span></p>
-          <p>Payment: <span className={`${payment.payment <= 0 ? 'negative' : 'positive'} ${'bold'}`}>{payment.payment}$</span></p>
+          <p>Payment: <span 
+          className=
+          {`${payment.payment <= 0
+             ?
+           'negative' : 'positive'} ${'bold'}`}
+          >{payment.payment}$</span></p>
         </div>
       ))}
     </div>

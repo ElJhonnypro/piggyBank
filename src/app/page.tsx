@@ -18,8 +18,11 @@ export default function Home() {
     const month = now.getMonth() + 1;
     const day = now.getDate();
     const hour = now.getHours();
-    const minute = now.getMinutes();
+    let minute = now.getMinutes();
 
+    if(minute <= 9){
+      minute = `0${String(minute)}`
+    }
     const formattedDate = `${year}-${month}-${day} ${hour}:${minute}`;
     setCurrentDate(formattedDate);
   };
@@ -37,6 +40,8 @@ export default function Home() {
         setTotal(0);
       });
     }
+
+    const getLastPayment = () => {
     axios
       .post("http://192.168.10.122:2345/lastPayment", {
         passwordapi: "myapipassword",
@@ -50,7 +55,7 @@ export default function Home() {
         console.error("Error fetching total:", error);
         setLastPayment(0);
       });
-
+  }
   const handleCreatePayment = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -72,6 +77,7 @@ export default function Home() {
   useEffect(() => {
     getCurrentDate()
     getTotalFunc()
+    getLastPayment()
   }, )
 
   return (

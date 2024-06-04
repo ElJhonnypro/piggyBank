@@ -1,0 +1,30 @@
+.mainLoadingDiv {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #39b3ff;
+    align-items: center;
+    text-align: center;
+  }
+  .mainLoadingDiv p {
+    font-weight: 900;
+    margin-top: 2px;
+  }
+  .mainLoadingDiv .vercelImg {
+    animation: spin 2s 1 linear;
+  }
+  
+
+  @keyframes spin { 
+    from { 
+        transform: rotate(0deg); 
+    } to { 
+        transform: rotate(360deg); 
+    }
+}
+

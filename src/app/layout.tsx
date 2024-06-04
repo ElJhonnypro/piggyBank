@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation';
 import './globals.css';
 import navbarstyles from './navbar.module.css';
 import Link from 'next/link';
+import LoadingScreen from './loadingScreen';
 
 export default function RootLayout({
   children,
@@ -20,6 +21,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body>
+        <LoadingScreen />
         {/* Navbar */}
         <header className={navbarstyles.header}>
           <nav>
@@ -30,7 +32,7 @@ export default function RootLayout({
                 }>
                   <Link href="/">Home</Link>
                   </li>
-
+                
               <li
                className={
                 pathname === '/payments' ? navbarstyles.active : navbarstyles.listitem
